@@ -25,7 +25,8 @@
         --c-green: rgb(133,153,0);
       }
 
-      body {background-color: var(--c-background-color); }
+      body {background-color: var(--c-background-color);
+            max-width: 800px; }
       nav ul {list-style-type: none;}
       main   {color: var(--base-font-color); }
       header {background-color: var(--c-background-highlights);
@@ -36,8 +37,19 @@
       footer {background-color: var(--c-background-highlights);
               color: var(--base-font-color);}
       article a {color: var(--c-magenta);  }
+      article h2, h3 {padding-top: 50px}
       a:hover {color: orange;}
+      aside {color: var(--c-green);}
+      aside a:link {color: var(--c-red); }
+      aside a:hover {color: var(--c-blue); }
       .divOne {border: 3px solid var(--c-cyan);  }
+      .flexContainer {display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              align-items: center;
+               }
+      .flexBox {display: flex; }
+
 
 
     </style>
@@ -52,13 +64,12 @@
     </header>
 
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Our team</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-
+        <ul class="flexContainer">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our team</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
        <!-- A Search form is another common non-linear way to navigate through a website. -->
 
        <form>
@@ -68,7 +79,7 @@
      </nav>
 
     <!-- Here is our page's main content -->
-    <main>
+    <main class="flexBox">
 
       <!-- It contains an article -->
       <article>
